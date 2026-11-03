@@ -1,0 +1,280 @@
+.navbar-shell {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: var(--page-bg);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 6%);
+}
+
+.navbar {
+  width: min(1300px, calc(100% - 48px));
+  height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__brand,
+.navbar__cart {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__brand {
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.navbar__logo {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.navbar__brand-light {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 36px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.navbar__links a:hover {
+  color: var(--text);
+}
+
+.navbar__cart {
+  gap: 9px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--brand-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navbar__cart-count {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  color: white;
+  font-size: 11px;
+}
+
+.navbar__menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--brand-primary);
+  cursor: pointer;
+}
+
+.navbar__menu-toggle svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.navbar__mobile-menu {
+  display: none;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__auth-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    width: calc(100% - 32px);
+    height: 66px;
+  }
+
+  .navbar__brand {
+    gap: 8px;
+    font-size: 17px;
+  }
+
+  .navbar__logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar > .navbar__links,
+  .navbar > .navbar__actions > .navbar__auth-actions {
+    display: none;
+  }
+
+  .navbar__actions {
+    gap: 8px;
+  }
+
+  .navbar__cart {
+    gap: 6px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .navbar__menu-toggle {
+    display: grid;
+  }
+
+  .navbar__mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: block;
+    width: min(1300px, calc(100% - 32px));
+    padding: 12px;
+    transform: translateX(-50%);
+    border: 1px solid var(--border);
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: var(--page-bg);
+    box-shadow: 0 16px 30px rgb(0 0 0 / 12%);
+  }
+
+  .navbar__mobile-links {
+    display: grid;
+    gap: 2px;
+  }
+
+  .navbar__mobile-links a {
+    display: block;
+    padding: 13px 12px;
+    border-radius: 7px;
+    color: var(--brand-primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .navbar__mobile-links a:hover {
+    background: var(--brand-soft);
+  }
+
+  .navbar__mobile-auth {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 10px;
+    padding: 12px 8px 4px;
+    border-top: 1px solid var(--border);
+  }
+
+  .navbar__mobile-auth .navbar__user-name {
+    flex: 1;
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .navbar__mobile-auth .navbar__login-button,
+  .navbar__mobile-auth .navbar__register-button {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar {
+    width: calc(100% - 24px);
+  }
+
+  .navbar__brand {
+    gap: 6px;
+    font-size: 15px;
+  }
+
+  .navbar__cart > span:nth-child(2) {
+    display: none;
+  }
+
+  .navbar__menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navbar__mobile-menu {
+    width: calc(100% - 24px);
+  }
+}
+
+.navbar__login-button {
+  border: 1px solid var(--brand-primary);
+  background: transparent;
+  color: var(--brand-primary);
+}
+
+.navbar__register-button {
+  border: 1px solid var(--brand-primary);
+  background: var(--brand-primary);
+  color: white;
+}
+
+.navbar__login-button,
+.navbar__register-button {
+  padding: 9px 13px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.navbar__user-name {
+  max-width: 120px;
+  overflow: hidden;
+  color: var(--brand-highlight);
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar__auth-actions .navbar__register-button {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .navbar__user-name {
+    max-width: 72px;
+    font-size: 10px;
+  }
+}
+
+

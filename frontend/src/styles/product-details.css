@@ -1,0 +1,175 @@
+.product-details {
+  width: min(1172px, calc(100% - 48px));
+  margin: 30px auto 70px;
+}
+
+.product-details__back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--brand-highlight);
+  font-size: 13px;
+}
+
+.product-details__content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.product-details__image {
+  display: grid;
+  min-height: 430px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--surface-muted);
+  color: var(--muted);
+}
+
+.product-details__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+  object-fit: cover;
+}
+
+.product-details__info h1 {
+  margin: 0 0 14px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.product-details__price {
+  font-size: 20px;
+}
+
+.product-details__description {
+  margin: 22px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.product-details__specifications {
+  margin: 24px 0;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.product-details__specifications h2 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.product-details__specifications dl {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.product-details__specification {
+  display: grid;
+  grid-template-columns: minmax(90px, .7fr) minmax(0, 1.3fr);
+  gap: 14px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.product-details__specification dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.product-details__specification dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.product-details__add {
+  width: 100%;
+  margin-top: 18px;
+  padding: 15px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--brand-primary);
+  color: white;
+}
+
+.product-details__add:disabled {
+  cursor: not-allowed;
+  background: var(--surface-muted);
+}
+
+.product-details__shopping-info {
+  display:grid;
+  gap:0;
+  margin-top:22px;
+  border-top:1px solid var(--border);
+}
+
+.product-details__shopping-info > div {
+  display:grid;
+  grid-template-columns:28px minmax(0,1fr);
+  gap:10px;
+  padding:13px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.product-details__shopping-info > div > span {
+  color:var(--brand-highlight);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.product-details__shopping-info p {
+  display:grid;
+  gap:4px;
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.55;
+}
+
+.product-details__shopping-info strong { color:var(--text); font-size:12px; }
+.product-details__shopping-info a { color:var(--brand-primary); font-weight:700; text-underline-offset:3px; }
+
+.product-card__image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.product-card__title-link:hover {
+  color: var(--brand-highlight);
+}
+
+@media (max-width: 700px) {
+  .product-details {
+    width: calc(100% - 32px);
+    margin-top: 22px;
+  }
+
+  .product-details__content {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .product-details__image,
+  .product-details__image img {
+    min-height: 300px;
+  }
+}
+
+

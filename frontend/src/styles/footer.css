@@ -1,0 +1,52 @@
+.footer {
+  width: min(1172px, calc(100% - 48px));
+  min-height: 88px;
+  margin: 0 auto;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer__logo {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.footer__brand-light {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.footer p,
+.footer small {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    width: calc(100% - 32px);
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+}
+
